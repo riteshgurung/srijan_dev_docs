@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Welcome to Srijan Developer Doc.
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+This document contains guidelines for developers. It contains guidelines for Git Workflow, setting up local development
+stacks, coding best practices. Ideally it would contain all the best practices which we should follow in Srijan.
 
-## Commands
+## Collaboration
+This document is an collaborative effort and built using [MkDocs](http://www.mkdocs.org) and code is hosted on 
+[Github](https://github.com/srijanaravali/srijan_dev_docs). Everyone in Srijan should have access to this repository,
+so in case you find any improvement, please feel free to raise a pull request.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
