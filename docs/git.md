@@ -29,7 +29,16 @@ dev-123-logo-authenticated-users-for-org
 ```
 
 ## Git commit messages
-
+* Start your git commit message with the ticket number of the feature you are working. Example ```Dev-123: added template
+for logo"
+* Git commit messages should highlight the work which you are saving in that particular commit. Please avoid generic
+commit messages like "added css"
+* Git commit messages should not contain any typos
+* Use git commit --amend in case you want to add/modify something to your last commit
+* [Refer](http://chris.beams.io/posts/git-commit/) for more
+* In case your commit message does not follow above points it is likely that the pull request might get rejected and you
+might have to make changes in your commit messages. Please read [this](https://help.github.com/articles/changing-a-commit-message/)
+to understand the process of changing git commit messages
 
 ## Git Workflows
 
@@ -38,3 +47,14 @@ dev-123-logo-authenticated-users-for-org
 ### Git Workflow 2
 
 ## Other important points to consinder
+
+
+
+
+
+
+
+
+
+
+
