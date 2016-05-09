@@ -2,4 +2,5 @@ site_name: Srijan Dev Guidelines
 pages:
 - Home: index.md
 - Git Workflow: git.md
-theme: readthedocs   
+- Using Features Module: features_module.md
+theme: readthedocs
