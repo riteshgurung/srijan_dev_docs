@@ -67,6 +67,19 @@ upstream        git@github.com:srijanaravali/srijan_dev_docs.git (push)
 ```
 Note above my forked repo is named as *origin* and the srijanaravali/srijan_dev_docs is named as *upstream*
 
+* Assuming your are working on the ticket number as specified in [Branch name conventions](git.md#branch-name-conventions), checkout to the base branch (taking dev as an example in this document, some teams might have sprint based base branches). It is important to checkout to base
+branch while you create a new feature branch. ```git checkout dev```
+* Create the feature branch ```git checkout -b dev-123-logo-authenticated-users-for-org```
+* Finish the task locally and make sure to unit test everything on local and save the code in local repo.
+* Pull the changes from upstream ```git pull --rebase upstream dev```. Traditional ```git pull``` creates a merge commit, hence to avoid this ```git pull --rebase``` is recommended.
+* Fix the conflicts in case any.
+* Push the feature branch to origin.
+* Raise a pull request from your forked (origin)repo's feature branch to upstream's dev branch.
+![Screenshot](images/pr.png)
+![Screenshot](images/diff.png)
+![Screenshot](images/review.png)
+* Your team would review your code, please fix those changes and push the changes to the feature branch. Please note guidelines as described in [Git commit messages](git.md#git-commit-messages) have to followed for your commit messages. Avoid commit messages like ```git commit -m "fixed as per feeback"``` instead use amend or squash to keep the commit messages clean.
+
 ### Git Workflow 2
 
 ## Other important points to consinder
