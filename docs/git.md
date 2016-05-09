@@ -28,14 +28,13 @@ Considering the above example the branch name could be
 dev-123-logo-authenticated-users-for-org
 ```
 
+## Git commit messages
 
 
+## Git Workflows
 
+### Git Workflow 1
 
+### Git Workflow 2
 
-
-
-
-
-
-
+## Other important points to consinder
