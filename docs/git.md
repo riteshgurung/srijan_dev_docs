@@ -82,15 +82,20 @@ branch while you create a new feature branch. ```git checkout dev```
 
 ### Git Workflow 2
 
+#### Architecture
+* Each project would have an upstream repository hosted on Srijan account.
+* [https://github.com/srijanaravali/srijan_dev_docs](https://github.com/srijanaravali/srijan_dev_docs) is an example of remote which we would be using as an example in this document.
+* In this workflow you are not required to create the fork, you would maintain a single remote and name it origin.
+
+### Steps
+* Clone the repo: ```git clone git@github.com:srijanaravali/srijan_dev_docs.git```
+* Checkout to the base branch: ```git checkout dev``` (dev is considered as a base branch in this example)
+* Create the feature branch: ```git checkout -b dev-123-logo-authenticated-users-for-org``` (It is important to checkout to dev branch or your base branch before creating your feature branch)
+* Finish your work locally and make sure to same commit messages guidelines as in Git Workflow 1
+* Rebase your work with your base branch: ```git pull --rebase origin dev```. This is important before your push your feature branch
+* Push your feature branch: ```git push origin dev-123-logo-authenticated-users-for-org```
+* Raise a Pull Request to the base branch
+![Screenshot](images/workflow_2.png)
+* Your team would review your code, please fix those changes and push the changes to the feature branch. Please note guidelines as described in [Git commit messages](git.md#git-commit-messages) have to followed for your commit messages. Avoid commit messages like ```git commit -m "fixed as per feeback"``` instead use amend or squash to keep the commit messages clean.
+
 ## Other important points to consinder
-
-
-
-
-
-
-
-
-
-
-
