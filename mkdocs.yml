@@ -3,4 +3,7 @@ pages:
 - Home: index.md
 - Git Workflow: git.md
 - Using Features Module: features_module.md
+- CSS: css.md
+- JavaScript: javascript.md
+- Templating: templating.md  
 theme: readthedocs
