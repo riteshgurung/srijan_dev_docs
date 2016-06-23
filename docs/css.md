@@ -185,29 +185,49 @@ input[type="checkbox"]
 --------------------------------------------
 
 ```
-stylesheets/
-|- main.scss
-|- base/
-|    |- _init.scss             /* @import libraries here. */
-|    |- _variables.scss
-|    |- _normalize.scss
-|    |- _typography.scss
-|- utilities/
-|    |- _mixins.scss
-|    |- _helpers.scss          /* utility/placeholder classes */
-|    |- ...
-|- layout/
-|    |- _layout-default.scss
-|    |- _header.scss
-|    |- _page-about.scss
-|    |- ...
-|- components/
-|    |- _nav.scss
-|    |- _buttons.scss
-|    |- _carousel.scss
-|    |- ...
-|- pages/
-|    |- _front.scss
-|    |- _about.scss
-|    |- ...
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _functions.scss    # Sass Functions
+|   |– _mixins.scss       # Sass Mixins
+|   |– _utilities.scss    # Sass Placeholders/Utility Classes
+|
+|– vendors/
+|   |– _bootstrap.scss    # Bootstrap
+|   |– _jquery-ui.scss    # jQuery UI
+|   …                     # Etc.
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|   …                     # Etc.
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _cover.scss        # Cover
+|   |– _dropdown.scss     # Dropdown
+|   …                     # Etc.
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _sidebar.scss      # Sidebar
+|   |– _forms.scss        # Forms
+|   …                     # Etc.
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|   |– _contact.scss      # Contact specific styles
+|   …                     # Etc.
+|
+|– themes/
+|   |– _theme.scss        # Default theme
+|   |– _admin.scss        # Admin theme
+|   …                     # Etc.
+|
+`– main.scss              # Main Sass file
 ```
