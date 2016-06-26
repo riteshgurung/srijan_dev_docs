@@ -5,5 +5,7 @@ pages:
 - Using Features Module: features_module.md
 - CSS: css.md
 - JavaScript: javascript.md
-- Templating: templating.md  
+- Templating: templating.md
+- SiteAudit: drupal_standards.md
+- DrupalStandards: drupal_standards.md
 theme: readthedocs
