@@ -7,5 +7,5 @@ pages:
 - JavaScript: javascript.md
 - Templating: templating.md
 - SiteAudit: 'drupal/drupal_standards.md'
-- drupalStandards: 'drupal/drupal_standards.md'
+- Drupal Standards: 'drupal/drupal_standards.md'
 theme: readthedocs
