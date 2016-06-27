@@ -2,10 +2,19 @@ site_name: Srijan Dev Guidelines
 pages:
 - Home: index.md
 - Git Workflow: git.md
+<<<<<<< HEAD
 - Using Features Module: 'Drupal/features_module.md'
 - CSS: css.md
 - JavaScript: javascript.md
 - Templating: templating.md
 - SiteAudit: 'Drupal/drupal_standards.md'
 - DrupalStandards: 'Drupal/drupal_standards.md'
+=======
+- Using Features Module: 'drupal/features_module.md'
+- CSS: css.md
+- JavaScript: javascript.md
+- Templating: templating.md
+- SiteAudit: 'drupal/drupal_standards.md'
+- drupalStandards: 'drupal/drupal_standards.md'
+>>>>>>> edab663542532e97d37762fcc0531176e5ccfef7
 theme: readthedocs
