@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Srijan Developer Doc.\n\n\nThis document contains guidelines for developers. It contains guidelines for Git Workflow, setting up local development\nstacks, coding best practices. Ideally it would contain all the best practices which we follow in Srijan.\n\n\nCollaboration\n\n\nThis document is an collaborative effort initially started by Srijan Developers and built using \nMkDocs\n and code is hosted on\n\nGithub\n. Some of the dev guidelines in the doc has links to external blogs which we always make sure\nto give credit to. In case you feel this document can be made better, please feel free to raise a pull request.\n\n\nUpdate\n\n\nWe have made the \nrepository\n on 17th August 2016.", 
+            "text": "Welcome to Srijan Developer Doc.\n\n\nThis document contains guidelines for developers. It contains guidelines for Git Workflow, setting up local development\nstacks, coding best practices. Ideally it would contain all the best practices which we follow in Srijan.\n\n\nCollaboration\n\n\nThis document is an collaborative effort initially started by Srijan Developers and built using \nMkDocs\n and code is hosted on\n\nGithub\n. Some of the dev guidelines in the doc has links to external blogs which we always make sure\nto give credit to. In case you feel this document can be made better, please feel free to raise a pull request.\n\n\nUpdate\n\n\nWe have made the \nrepository\n public on 17th August 2016.", 
             "title": "Home"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#update", 
-            "text": "We have made the  repository  on 17th August 2016.", 
+            "text": "We have made the  repository  public on 17th August 2016.", 
             "title": "Update"
         }, 
         {
