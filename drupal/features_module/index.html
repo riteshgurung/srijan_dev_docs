@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Using Features Module - Srijan Dev Guidelines</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using Features Module";
+    var mkdocs_page_input_path = "drupal/features_module.md";
+    var mkdocs_page_url = "/drupal/features_module/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Srijan Dev Guidelines</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/">Git Workflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Using Features Module</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#feature-guidelines">Feature Guidelines</a></li>
+                
+                    <li><a class="toctree-l4" href="#dos-and-donts-with-features">Dos and Don'ts with Features.</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-should-go-inside-a-feature">What should go inside a feature</a></li>
+                
+                    <li><a class="toctree-l4" href="#naming-conventions">Naming Conventions</a></li>
+                
+                    <li><a class="toctree-l4" href="#resources">Resources</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../css/">CSS</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../javascript/">JavaScript</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../templating/">Templating</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal_standards/">SiteAudit</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal_standards/">Drupal Standards</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Srijan Dev Guidelines</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Using Features Module</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="feature-guidelines">Feature Guidelines</h1>
+<p>All the projects should use <a href="https://drupal.org/project/features">Features</a> Module for deployment. All the team members should go through 
+<em>Drupal Deployment with Features and Drush Series</em> from Drupalize.me.</p>
+<h2 id="dos-and-donts-with-features">Dos and Don'ts with Features.</h2>
+<ul>
+<li>Feature module is not for porting your configurations from one instance to other but to bundle up your functionality/feature.</li>
+<li>Everytime you create new feature think it like any other custom/contrib module which is in place to serve specific functionality.</li>
+<li>The way you build features is depends on agreement of your team. The most important thing is the complete team follow the same guidliness, its very important to discuss feature architecture with in team before you start a project.</li>
+<li>The best way to decide what a feature will have is to look around configurations for specific set of functionalities. Consider this with an example: You want to have image carousel on your sight, so what we do is create a content type called Image Slider, Install views module Install silder display plugin, create view, create image cache. So basically all of these configuration build one feature "Carousel". This makes this complete bundle of functionalities to go in one feature which you even install  on vanilla drupal gives you all you want to start with.</li>
+<li>Features should be independent of each other, so if they are created of specific set of functionality there is less chance of ending up of dependencies.</li>
+<li>Its good to have multiple features broken into small set of standalone functionalties rather than one mamoth feature. A feature with lot of configuration is really hard to maintain and also it creates chances to wipe configuration and hence <strong>client data</strong>.</li>
+<li>Its important to maintain your features in default state, otherwise features which are not updated for long can cause loss of data and configuration.</li>
+<li>Features are never supposed to get direct deployed on production, they always need a prior testing. So workflow could be create feature on your local and deploy it to dev, get it tested and then move it to stg/prod.</li>
+<li>Always think twice before you decide to revert or recreate feature, revert will update your database to match with your codebase and recreate/update will update your codebase as per your database configurations.</li>
+<li>While reverting a feature make sure you are not deleting important configuration. <a href="https://www.drupal.org/project/features_diff">Feature Diff</a> is a good module to see the difference in feature code and what is there in database.</li>
+<li>Always make sure you take latest feature codebase before you are updating it.</li>
+<li>Git helps a lot in making sure we are not overring someone else configuration via feature, always look at git diff on your features file if multiple people working on same project.</li>
+<li>Always create a base field feature which helps a lot in keeping base settings and instance settings of fields at two places and hence less chances of overriding one module because of other. <a href="https://www.phase2technology.com/blog/new-field-bases-and-instances-in-features/">Good Read</a>.</li>
+</ul>
+<h2 id="what-should-go-inside-a-feature">What should go inside a feature</h2>
+<ul>
+<li>Less is more in case of feature.</li>
+<li>The bare minimum. Do not get the configurations you get out of the box, for example we are not supposed to pull a body field in content type as this is what Drupal gives out of the box, soon you install the feature which if creates a content type, body field will create by itself, it does not need to be part of features.</li>
+<li>So if we are exporting a content type with features settings like create/edit/comment permission, comment settings, publishing settings should only go inside a feature if you are configuring it what the drupal does not give by defaul, else no need to get the things in feature what drupal gives by default.</li>
+<li></li>
+</ul>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<ul>
+<li>All features should be saved to /sites/all/modules/features/</li>
+<li>All features should be prefixed with <project_name> when being named</li>
+<li>Features should be named appropriate to what they are. Take example of feature mentioned above about image_slider, so if we are workign on project called test so our feature name could be test_image_slider. Now catch is if you are building a feature which is generic enough to be reused in other projects than do not prefix feature module with project name, so all such generaised and resusable feature module might start with "feature_" itself, in our case it would be "feature_image_silder".</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>slides.com/arpitrastogi/agenda</li>
+<li>https://www.phase2technology.com/blog/new-field-bases-and-instances-in-features/</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../css/" class="btn btn-neutral float-right" title="CSS">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../git/" class="btn btn-neutral" title="Git Workflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../css/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

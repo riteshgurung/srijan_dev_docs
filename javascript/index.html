@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>JavaScript - Srijan Dev Guidelines</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "JavaScript";
+    var mkdocs_page_input_path = "javascript.md";
+    var mkdocs_page_url = "/javascript/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Srijan Dev Guidelines</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">Git Workflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/features_module/">Using Features Module</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../css/">CSS</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">JavaScript</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#js-guidelines">JS Guidelines</a></li>
+                
+                    <li><a class="toctree-l4" href="#common-guide">Common Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#drupal-js-api">Drupal JS API</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../templating/">Templating</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/drupal_standards/">SiteAudit</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/drupal_standards/">Drupal Standards</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Srijan Dev Guidelines</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>JavaScript</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="js-guidelines">JS Guidelines</h1>
+<h2 id="common-guide"><strong>Common Guide</strong></h2>
+<ul>
+<li>
+<p>Use single quotes '' for strings.</p>
+</li>
+<li>
+<p>No additional trailing comma in options.</p>
+</li>
+<li>
+<p>Always wrap code with anonymous function.</p>
+</li>
+</ul>
+<pre><code class="js">(function() {
+
+})();
+</code></pre>
+
+<ul>
+<li>Always use <code>var</code> to declare variables. Not doing so will result in global variables.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="js">  x = 'Batman';
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="js">  var x = 'Batman';
+</code></pre>
+
+<ul>
+<li>Prefix jQuery object variables with a <code>$</code>.</li>
+</ul>
+<pre><code class="js">var $sidebar = $('.sidebar');
+</code></pre>
+
+<ul>
+<li>Use shorthands.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="js">var selector = jQuery('.sidebar');
+var obj = new Object();
+var arr = new Array();
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="js">var selector = $('.sidebar');
+var obj = {};
+var arr = [];
+</code></pre>
+
+<ul>
+<li>Always cache DOM selection if you plan to re-use data.</li>
+</ul>
+<pre><code class="js">var $search_form = $('#block-search').find('form');
+</code></pre>
+
+<ul>
+<li>
+<p>Save reference to <code>this</code> as variable too.</p>
+<p><code>js
+var _this = $(this); OR var _this = this;</code></p>
+</li>
+<li>
+<p>Avoid using <code>$.each</code> for repeated or performance critical functionality. Instead use a <code>for</code> loop.</p>
+</li>
+</ul>
+<h2 id="drupal-js-api"><strong>Drupal JS API</strong></h2>
+<ul>
+<li>Always use Drupal.behaviours in Drupal</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="js">(function($, Drupal) {
+  $(document).ready(function() {
+
+  });
+})(jQuery, Drupal);
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="js">(function($, Drupal) {
+  Drupal.behaviour.behaviour_name = {
+    attach: function (context, settings) {
+
+    }
+  };
+})(jQuery, Drupal);
+</code></pre>
+
+<ul>
+<li>Use dot notation when accessing properties.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="js">Drupal.settings['base_url']
+</code></pre>
+
+<p><strong>Yup:</strong>
+  <code>js
+Drupal.settings.base_url</code></p>
+<ul>
+<li>Keep DOM manipulation after page load in theme js.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../templating/" class="btn btn-neutral float-right" title="Templating">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../css/" class="btn btn-neutral" title="CSS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../css/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../templating/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

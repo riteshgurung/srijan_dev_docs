@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>CSS - Srijan Dev Guidelines</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CSS";
+    var mkdocs_page_input_path = "css.md";
+    var mkdocs_page_url = "/css/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Srijan Dev Guidelines</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">Git Workflow</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/features_module/">Using Features Module</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">CSS</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#scss-guidelines">Scss Guidelines</a></li>
+                
+                    <li><a class="toctree-l4" href="#common-guide">Common Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#sass-guide">Sass Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#architecture-of-sass-directory-structure">Architecture of Sass directory structure</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../javascript/">JavaScript</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../templating/">Templating</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/drupal_standards/">SiteAudit</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../drupal/drupal_standards/">Drupal Standards</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Srijan Dev Guidelines</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>CSS</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="scss-guidelines">Scss Guidelines</h1>
+<h2 id="common-guide"><strong>Common Guide</strong></h2>
+<ul>
+<li>
+<p>No Inline CSS, always use external file.</p>
+</li>
+<li>
+<p>Minify and gzip css file on production site.</p>
+</li>
+<li>
+<p>Separate each ruleset by a blank line.</p>
+</li>
+<li>
+<p>All CSS rules should have a space after the selector &amp; colon and a trailing semi-colon.</p>
+</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  .block
+  {
+  color: red;
+  }
+</code></pre>
+
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  .block{
+    color:red;
+  }
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  .block {
+    color: red;
+  }
+</code></pre>
+
+<ul>
+<li>
+<p>Include a space after each comma in comma-separated property or function values.</p>
+</li>
+<li>
+<p>Use of BEM selectors instead of camelCase OR other format.</p>
+</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="html">  .blockSearch
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="html">  .block--search
+</code></pre>
+
+<ul>
+<li>Don't use unit if value is 0.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  width: 0px;
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  width: 0;
+</code></pre>
+
+<ul>
+<li>Never display trailing zeros.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">padding: 0.5em;
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">padding: .5em;
+</code></pre>
+
+<ul>
+<li>Don't over qualify class or ID selectors. Leads to specificity issues further down the line.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">div.block
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">.block
+</code></pre>
+
+<ul>
+<li>Quote attribute values in selectors.</li>
+</ul>
+<pre><code class="css">input[type=&quot;checkbox&quot;]
+</code></pre>
+
+<ul>
+<li>
+<p>Use Icon fonts where possible otherwise use sprites for images.</p>
+</li>
+<li>
+<p>Don't use <code>!important</code> reactively. But it is okay to use <code>!important</code> on helper classes only. To add <code>!important</code> pre-emptively is fine, e.g. <code>.error { color:red!important }</code>, as you know you will always want this rule to take precedence.</p>
+</li>
+<li>
+<p>Use single quotes '' for strings.</p>
+</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  font-family: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+  background-image: url(/images/kittens.jpg);
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  font-family: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+  background-image: url('/images/kittens.jpg');
+</code></pre>
+
+<h2 id="sass-guide"><strong>Sass Guide</strong></h2>
+<ul>
+<li>Use Scss syntax not sass.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  .block
+    color: red;
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  .block {
+    color: red;
+  }
+</code></pre>
+
+<ul>
+<li>Don't over nest selectors.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  .menu {
+    .menu__item {
+      .menu__link {
+        // something...
+        }
+      }
+    }
+  }
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  .menu {
+    .menu__item {
+      // something...
+    }
+    .menu__link {
+      // something...
+    }
+  }
+</code></pre>
+
+<ul>
+<li>Use variable names in a format.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  $header-bg-color: red;
+  $menu-link-color: green;
+  $footer-link-color: blue;
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  $color-header-bg: red;
+  $color-link-color: green;
+  $color-footer-link: blue;
+</code></pre>
+
+<ul>
+<li>Top-level numeric calculations should always be wrapped in parentheses.</li>
+</ul>
+<p><strong>Nope:</strong></p>
+<pre><code class="css">  width: 100% / 3;
+</code></pre>
+
+<p><strong>Yup:</strong></p>
+<pre><code class="css">  width: (100% / 3);
+</code></pre>
+
+<h2 id="architecture-of-sass-directory-structure"><strong>Architecture of Sass directory structure</strong></h2>
+<pre><code>sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _functions.scss    # Sass Functions
+|   |– _mixins.scss       # Sass Mixins
+|   |– _utilities.scss    # Sass Placeholders/Utility Classes
+|
+|– vendors/
+|   |– _bootstrap.scss    # Bootstrap
+|   |– _jquery-ui.scss    # jQuery UI
+|   …                     # Etc.
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|   …                     # Etc.
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _cover.scss        # Cover
+|   |– _dropdown.scss     # Dropdown
+|   …                     # Etc.
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _sidebar.scss      # Sidebar
+|   |– _forms.scss        # Forms
+|   …                     # Etc.
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|   |– _contact.scss      # Contact specific styles
+|   …                     # Etc.
+|
+|– themes/
+|   |– _theme.scss        # Default theme
+|   |– _admin.scss        # Admin theme
+|   …                     # Etc.
+|
+`– main.scss              # Main Sass file
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../javascript/" class="btn btn-neutral float-right" title="JavaScript">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../drupal/features_module/" class="btn btn-neutral" title="Using Features Module"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../drupal/features_module/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../javascript/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
